@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Customers.UI</title>
+    
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<div class="w-full h-full flex flex-col">
+    <header class="bg-background px-6 py-4 border-b">
+        <div class="flex items-center justify-between">
+            <h1 class="text-2xl font-bold">Customer Management</h1>
+            <div>
+                <a asp-action="Index" asp-controller="Home" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Customers</a>
+                <a asp-action="CreateCustomer" asp-controller="Home" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Add Customer</a>
+            </div>
+        </div>
+        
+    </header>
+</div>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="">
+
+</footer>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
